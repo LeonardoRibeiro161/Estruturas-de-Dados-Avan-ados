@@ -16,15 +16,18 @@ using namespace std;
 //Funcao para banner
 void banner()
 {
-	cout<<"-------------------------------------"<<endl;
+	cout<<"--------------------------------------------------------" <<endl;
 	cout<<"Grafo - MATRIZ DE ADJACENCIA"<<endl;
-	cout<<"-------------------------------------"<<endl;
+	cout<<"Curso: Ciencia da Computacao"<<endl;
+	cout<<"Disciplina: Algoritmos e Estrutura de Dados Avancado"<<endl;
+	cout<<"--------------------------------------------------------" <<endl;
 }
 
 int main()
 {
 	
 	int qte_vert,resp, linha, coluna;
+	char indiceC = 65, indiceL = 65;
 	banner();
 	
 	cout <<"Informe o numero de Vertices:";
@@ -32,11 +35,29 @@ int main()
 	int matriz[qte_vert][qte_vert] = {},i,j;
 	
 	//Mostrar matriz
-	for(i = 0; i < qte_vert; i++)
+	for(i = -1; i < qte_vert; i++)
 	{
+		if(i >=0)
+		{
+			cout<<char(indiceL);
+			indiceL++;
+		}
+		
 		for(j = 0;j < qte_vert;j++)
 		{
-			cout<<matriz[i][j]<<"\t";
+			if(i == -1)
+			{
+				cout<<"  "<<char(indiceC);
+				indiceC++;
+			}
+			else
+			{
+				if(j == 0)
+					cout<<" "<<matriz[i][j]<<" ";
+				else
+					cout<<" "<<matriz[i][j]<<" ";
+			}	
+			
 		}
 		cout<<"\n";
 	}
@@ -60,11 +81,32 @@ int main()
 	system("cls");
 	
 	//Saida da Matriz Adjacencia
-	for(i = 0; i < qte_vert; i++)
+	//Reiniciando os valores 
+	indiceC = 65, indiceL = 65;
+	
+	for(i = -1; i < qte_vert; i++)
 	{
+		if(i >=0)
+		{
+			cout<<char(indiceL);
+			indiceL++;
+		}
+		
 		for(j = 0;j < qte_vert;j++)
 		{
-			cout<<matriz[i][j]<<"\t";
+			if(i == -1)
+			{
+				cout<<"  "<<char(indiceC);
+				indiceC++;
+			}
+			else
+			{
+				if(j == 0)
+					cout<<" "<<matriz[i][j]<<" ";
+				else
+					cout<<" "<<matriz[i][j]<<" ";
+			}	
+			
 		}
 		cout<<"\n";
 	}
