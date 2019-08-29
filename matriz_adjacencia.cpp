@@ -1,10 +1,10 @@
 /* 
 FACULDADE PITAGORAS - Unidade BETIM
 -----------------------------------------------------
-Curso: Ciência da Computação
-Disciplina: Algoritmos e Estrutura de Dados Avançado
-Título: IMPLEMENTAÇÃO DE GRAFO - MATRIZ DE ADJACÊNCIA
-Versão: 1.0 
+Curso: CiÃªncia da ComputaÃ§Ã£o
+Disciplina: Algoritmos e Estrutura de Dados AvanÃ§ado
+TÃ­tulo: IMPLEMENTAÃ‡ÃƒO DE GRAFO - MATRIZ DE ADJACÃŠNCIA
+VersÃ£o: 1.0 
 Leonardo da Silva Ribeiro
 -----------------------------------------------------
 */
@@ -82,6 +82,7 @@ int main()
 	
 	//Saida da Matriz Adjacencia
 	//Reiniciando os valores 
+	cout<<"[-] - Matriz Adjacente formada"<<endl;
 	indiceC = 65, indiceL = 65;
 	
 	for(i = -1; i < qte_vert; i++)
@@ -111,24 +112,26 @@ int main()
 		cout<<"\n";			
 	}
 	
-	indiceC = 65, indiceL = 65;
+	
 	//Mapeando caminhos
 	cout<<"[+] - Mapeamento de caminhos da matriz"<<endl;
-	for(i = -1; i < qte_vert; i++)
+	for(i = 0; i < qte_vert; i++)
 	{
+		
+		indiceL = 65;
+		indiceL += i;
 		
 		for(j = 0;j < qte_vert;j++)
 		{
-			
+			indiceC = 65;
+			indiceC  += j;
+				
 			if(matriz[i][j] == 1)
 			{
 				cout<<"("<<indiceL<<") --- ("<<indiceC<<")"<<endl;
-			}
-			indiceC++;
+			}	
 		}
-		indiceL++;
-		
+			
 	}
 
-	
 }
