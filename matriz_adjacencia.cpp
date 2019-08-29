@@ -74,12 +74,12 @@ int main()
 		cin>>coluna;
 		matriz[linha][coluna] = 1;
 		
-		cout<<"Digite [1] p/ continuar [2] p/ encerrar";
+		cout<<"Digite [1] p/ continuar [2] p/ encerrar:";
 		cin>>resp;		
 	}
 	while(resp == 1);
 	system("cls");
-	
+	banner();
 	//Saida da Matriz Adjacencia
 	//Reiniciando os valores 
 	cout<<"[-] - Matriz Adjacente formada"<<endl;
@@ -91,8 +91,7 @@ int main()
 		{
 			cout<<char(indiceL);
 			indiceL++;
-		}
-		
+		}	
 		for(j = 0;j < qte_vert;j++)
 		{
 			if(i == -1)
@@ -106,14 +105,13 @@ int main()
 					cout<<" "<<matriz[i][j]<<" ";
 				else
 					cout<<" "<<matriz[i][j]<<" ";
-			}	
-			
+			}		
 		}
 		cout<<"\n";			
 	}
 	
-	
 	//Mapeando caminhos
+	
 	cout<<"[+] - Mapeamento de caminhos da matriz"<<endl;
 	for(i = 0; i < qte_vert; i++)
 	{
@@ -128,7 +126,7 @@ int main()
 				
 			if(matriz[i][j] == 1)
 			{
-				cout<<"("<<indiceL<<") --- ("<<indiceC<<")"<<endl;
+				cout<<"("<<indiceL<<") <--->  ("<<indiceC<<")"<<endl;
 			}	
 		}
 			
