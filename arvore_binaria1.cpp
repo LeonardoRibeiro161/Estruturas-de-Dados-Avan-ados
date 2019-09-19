@@ -1,6 +1,6 @@
 /*1.
-Implemente uma ¡rvore Estritamente Bin·ria utilizando alocaÁ„o
-est·tica.
+Implemente uma √Årvore Estritamente Bin√°ria utilizando aloca√ß√£o
+est√°tica.
 */
 #include<iostream>
 #include<stdlib.h>
